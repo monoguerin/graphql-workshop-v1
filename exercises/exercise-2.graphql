@@ -1,0 +1,9 @@
+# Write a Query Operation named 'ShipmentStatus'
+# Get the 'state' of a shipment with 'id' passed as an argument like $id 
+# Use an alias so the field response will be 'status' instead of 'state'
+
+query ShipmentStatus($id: ID!) {
+  shipment(id: $id) {
+    status: state
+  }
+}

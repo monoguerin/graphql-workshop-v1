@@ -1,0 +1,13 @@
+# Write your first Query Operation
+# Get 'id', 'state', 'truckNumber', 'shipperRate' and all the 'stops.id' from the shipment "123"
+{
+  shipment(id: "123") {
+    id
+    state
+    truckNumber
+    shipperRate
+    stops {
+      id
+    }
+  }
+}

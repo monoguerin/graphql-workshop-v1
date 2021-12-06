@@ -1,0 +1,26 @@
+# Write a Query Operation named 'ShipmentUsers'
+# Get a shipment with a variable 'id' coming from an argument called '$id'
+# Get fields 'carrierManager', 'currentCeRep' and 'cxRep'
+# Using a fragment called 'UserFragment' from type 'User' get 'id', 'firstName', 'lastName' and 'email'
+# For each of the fields asked in the shipment
+
+fragment UserFragment on User {
+  id
+  firstName
+  lastName
+  email
+}
+
+query ShipmentUsers($id: ID!) {
+  shipment(id: $id) {
+    carrierManager {
+      ...UserFragment
+    }
+    currentCeRep {
+      ...UserFragment
+    }
+    cxRep {
+      ...UserFragment
+    }
+  }
+}
