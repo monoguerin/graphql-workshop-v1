@@ -1,0 +1,3 @@
+# Write a mutation Operation called 'CreateNote'
+# This Operation will call 'createNote' mutation with generic arguments as an $input
+# Get as response 'body' of the Note and Error 'message'

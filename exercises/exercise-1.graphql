@@ -1,0 +1,2 @@
+# Write your first Query Operation
+# Get 'id', 'state', 'truckNumber', 'shipperRate' and all the 'stops.id' from the shipment "123"
