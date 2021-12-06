@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon src/index.js",
-    "test": "jest"
+    "test": "jest",
+    "exercise-1": "jest exercise-1",
+    "exercise-2": "jest exercise-2",
+    "exercise-3": "jest exercise-3",
+    "exercise-4": "jest exercise-4"
   },
   "repository": {
     "type": "git",

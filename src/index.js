@@ -23,7 +23,7 @@ var root = {
 var app = express();
 
 app.use(
-  "/graphql",
+  "/",
   graphqlHTTP({
     schema: schema,
     rootValue: root,
@@ -32,4 +32,4 @@ app.use(
 );
 
 app.listen(8080);
-console.log("Running a GraphQL API server at http://localhost:8080/graphql");
+console.log("Running a GraphQL API server at http://localhost:8080");
