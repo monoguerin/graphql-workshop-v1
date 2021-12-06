@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "start": "nodemon src/index.js",
-    "test": "jest"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/monoguerin/graphql-workshop-v1.git"
