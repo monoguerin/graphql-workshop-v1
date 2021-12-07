@@ -296,7 +296,7 @@ const root = {
   },
   createNote(args) {
     NOTES.push({
-      body: args.body,
+      body: args.input.body,
       callBackAt: '2021-10-01T14:07:03-04:00',
       calledBackAt: '2021-10-01T14:07:03-04:00',
       createdAt: '2021-10-01T14:07:03-04:00',
