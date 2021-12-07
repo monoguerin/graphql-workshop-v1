@@ -7,17 +7,6 @@ const { readFileSync } = require("fs");
 const typeDefs = readFileSync("./src/schema.graphql").toString("utf-8");
 
 // Construct a schema, using GraphQL schema language
-<<<<<<< HEAD
-var schema = buildSchema(typeDefs);
-
-// The root provides a resolver function for each API endpoint
-var root = {
-  shipment(args) {
-    console.log(args)
-
-    return {
-      id: args.id
-=======
 const schema = buildSchema(typeDefs);
 
 const NOTES = [
@@ -330,7 +319,6 @@ const root = {
     return {
       errors: [],
       note: NOTES[NOTES.length - 1]
->>>>>>> main
     }
   }
 };
@@ -338,11 +326,7 @@ const root = {
 var app = express();
 
 app.use(
-<<<<<<< HEAD
-  "/graphql",
-=======
   "/",
->>>>>>> main
   graphqlHTTP({
     schema: schema,
     rootValue: root,
@@ -351,8 +335,4 @@ app.use(
 );
 
 app.listen(8080);
-<<<<<<< HEAD
-console.log("Running a GraphQL API server at http://localhost:8080/graphql");
-=======
 console.log("Running a GraphQL API server at http://localhost:8080");
->>>>>>> main
