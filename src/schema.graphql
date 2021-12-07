@@ -159,8 +159,11 @@ type Shipment {
   notes: [Note!]!
   poReferences: [String!]!
   shipmentIssueIds: [ID!]!
+<<<<<<< HEAD
   shipperApplication: ShipperApplication!
   shipperApplicationId: ID!
+=======
+>>>>>>> main
   shipperCancelationFee: Float
   shipperInsuranceRequirement: ShipperInsuranceRequirement!
   shipperMiles: Float
