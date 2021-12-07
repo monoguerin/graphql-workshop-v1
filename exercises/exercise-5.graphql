@@ -3,3 +3,12 @@
 # Get fields 'id' and 'stops.id'
 # Using the directive @include control if the stops are going to be added in the response
 # Add a Boolean variable called $withStops to be used as the conditional of the directive
+
+query ShipmentStops($id: ID!, $withStops: Boolean!) {
+  shipment(id: $id) {
+    id
+    stops @include(if: $withStops) {
+      id
+    }
+  }
+}
