@@ -9,7 +9,8 @@
     "exercise-1": "jest exercise-1",
     "exercise-2": "jest exercise-2",
     "exercise-3": "jest exercise-3",
-    "exercise-4": "jest exercise-4"
+    "exercise-4": "jest exercise-4",
+    "exercise-5": "jest exercise-5"
   },
   "repository": {
     "type": "git",
