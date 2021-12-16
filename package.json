@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon src/index.js",
+    "rogers": "webpack serve --config ./src/rogers/webpack.config.js --color --progress --open --env env=development",
     "test": "jest",
     "exercise-1": "jest exercise-1",
     "exercise-2": "jest exercise-2",
@@ -24,11 +25,38 @@
   },
   "homepage": "https://github.com/monoguerin/graphql-workshop-v1#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "@babel/plugin-transform-runtime": "^7.16.5",
+    "@testing-library/jest-dom": "^5.16.1",
+    "babel-loader": "^8.2.3",
+    "babel-plugin-transform-react-stateless-component-name": "^1.1.2",
+    "css-loader": "^6.5.1",
     "express-graphql": "^0.12.0",
     "graphql": "^15.7.2",
     "graphql-tag": "^2.12.6",
+    "html-webpack-plugin": "^5.5.0",
     "jest": "^27.4.3",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "sass": "^1.45.0",
+    "sass-loader": "^12.4.0",
+    "webpack": "^5.65.0",
+    "webpack-dev-server": "^4.6.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.16.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.16.5",
+    "@babel/plugin-proposal-private-methods": "^7.16.5",
+    "@babel/plugin-proposal-private-property-in-object": "^7.16.5",
+    "@babel/plugin-transform-arrow-functions": "^7.16.5",
+    "@babel/plugin-transform-async-to-generator": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "@babel/preset-react": "^7.16.5",
+    "@babel/preset-typescript": "^7.16.5",
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "express": "^4.17.1",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-middleware": "^5.2.2"
   }
 }

@@ -1,4 +1,6 @@
 const express = require("express");
+const webpack = require('webpack');
+const webpackDevMiddleware = require('webpack-dev-middleware');
 const { graphqlHTTP } = require("express-graphql");
 const { buildSchema } = require("graphql");
 const { readFileSync } = require("fs");
@@ -324,9 +326,19 @@ const root = {
 };
 
 var app = express();
+const config = require('./rogers/webpack.config.js');
+const compiler = webpack(config);
+
+// Tell express to use the webpack-dev-middleware and use the webpack.config.js
+// configuration file as a base.
+app.use(
+  webpackDevMiddleware(compiler, {
+    publicPath: config.output.publicPath,
+  })
+);
 
 app.use(
-  "/",
+  "/graphql",
   graphqlHTTP({
     schema: schema,
     rootValue: root,

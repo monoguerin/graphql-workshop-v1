@@ -1,0 +1,51 @@
+{
+  "compilerOptions": {
+    // Target latest version of ECMAScript.
+    "target": "esnext",
+    "module": "esnext",
+    // Search under node_modules for non-relative imports.
+    "moduleResolution": "Node",
+    // Process & infer types from .js files.
+    "allowJs": true,
+    // Don't emit; allow Babel to transform files.
+    "noEmit": true,
+    // Enable strictest settings like strictNullChecks & noImplicitAny.
+    "strict": true,
+    // Disallow features that require cross-file information for emit.
+    "isolatedModules": true,
+    // Import non-ES modules as default imports.
+    "esModuleInterop": true,
+    // Skip type checking of all declaration files
+    "skipLibCheck": true,
+    // Makes jsx syntax valid in tsx files.
+    "jsx": "preserve",
+    // Include modules imported with '.json' extension
+    "resolveJsonModule": true,
+    // Generate source maps for ts and tsx files
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "src",
+    /**
+     * Differentiate between undefined and not present when type checking
+     */
+    "exactOptionalPropertyTypes": false,
+    /**
+     * Default catch clause variables as unknown instead of any.
+     */
+    "useUnknownInCatchVariables": false,
+    "paths": {
+      "apps": ["apps/"],
+      "marketplace": ["apps/marketplace/"],
+      "assets": ["assets/"],
+      "components": ["components/"],
+      "icons": ["components/atoms/icons/"],
+      "icons/deprecated": ["components/atoms/icons/deprecated/"],
+      "constants": ["constants/"],
+      "utils": ["utils/"],
+      "tests": ["tests/e2e/specs/"],
+      "transfix-ui": ["transfix-ui/"]
+    },
+    "types": ["jest"]
+  },
+  "exclude": ["node_modules", "src/mobile", "src/packages", "tests/e2e", "dist", "dpl"]
+}
