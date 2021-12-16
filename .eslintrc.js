@@ -13,8 +13,6 @@ module.exports = {
   extends: [
     'airbnb', // https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb/rules/react.js
     'prettier',
-    'prettier/react',
-    'prettier/@typescript-eslint',
     'plugin:storybook/recommended',
   ],
   parser: '@typescript-eslint/parser',
@@ -178,8 +176,8 @@ module.exports = {
         'spaced-comment': OFF,
       },
       parserOptions: {
-        operations: './src/**/*.graphql',
-        schema: './src/schema.graphql',
+        operations: 'src/rogers/**/*/*.graphql',
+        schema: 'src/schema.graphql',
       },
     },
     {

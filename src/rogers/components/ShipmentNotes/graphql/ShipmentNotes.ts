@@ -12,10 +12,12 @@ import * as Types from '../../../types/graphqlTypes';
 import { gql } from '@apollo/client';
 import * as Apollo from '@apollo/client';
 const defaultOptions =  {}
-export type IUnnamed_1_QueryVariables = Types.Exact<{ [key: string]: never; }>;
+export type IShipmentNotesQueryVariables = Types.Exact<{
+  id: Types.Scalars['ID'];
+}>;
 
 
-export type IUnnamed_1_Query = (
+export type IShipmentNotesQuery = (
   { __typename?: 'Query' }
   & { shipment?: Types.Maybe<(
     { __typename?: 'Shipment' }
@@ -24,37 +26,38 @@ export type IUnnamed_1_Query = (
 );
 
 
-export const Document = gql`
-    {
-  shipment(id: "123") {
+export const ShipmentNotesDocument = gql`
+    query ShipmentNotes($id: ID!) {
+  shipment(id: $id) {
     id
   }
 }
     `;
 
 /**
- * __useQuery__
+ * __useShipmentNotesQuery__
  *
- * To run a query within a React component, call `useQuery` and pass it any options that fit your needs.
- * When your component renders, `useQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * To run a query within a React component, call `useShipmentNotesQuery` and pass it any options that fit your needs.
+ * When your component renders, `useShipmentNotesQuery` returns an object from Apollo Client that contains loading, error, and data properties
  * you can use to render your UI.
  *
  * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
  *
  * @example
- * const { data, loading, error } = useQuery({
+ * const { data, loading, error } = useShipmentNotesQuery({
  *   variables: {
+ *      id: // value for 'id'
  *   },
  * });
  */
-export function useQuery(baseOptions?: Apollo.QueryHookOptions<IQuery, IQueryVariables>) {
+export function useShipmentNotesQuery(baseOptions: Apollo.QueryHookOptions<IShipmentNotesQuery, IShipmentNotesQueryVariables>) {
         const options = {...defaultOptions, ...baseOptions}
-        return Apollo.useQuery<IQuery, IQueryVariables>(Document, options);
+        return Apollo.useQuery<IShipmentNotesQuery, IShipmentNotesQueryVariables>(ShipmentNotesDocument, options);
       }
-export function useLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<IQuery, IQueryVariables>) {
+export function useShipmentNotesLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<IShipmentNotesQuery, IShipmentNotesQueryVariables>) {
           const options = {...defaultOptions, ...baseOptions}
-          return Apollo.useLazyQuery<IQuery, IQueryVariables>(Document, options);
+          return Apollo.useLazyQuery<IShipmentNotesQuery, IShipmentNotesQueryVariables>(ShipmentNotesDocument, options);
         }
-export type QueryHookResult = ReturnType<typeof useQuery>;
-export type LazyQueryHookResult = ReturnType<typeof useLazyQuery>;
-export type QueryResult = Apollo.QueryResult<IQuery, IQueryVariables>;
+export type ShipmentNotesQueryHookResult = ReturnType<typeof useShipmentNotesQuery>;
+export type ShipmentNotesLazyQueryHookResult = ReturnType<typeof useShipmentNotesLazyQuery>;
+export type ShipmentNotesQueryResult = Apollo.QueryResult<IShipmentNotesQuery, IShipmentNotesQueryVariables>;

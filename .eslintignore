@@ -19,7 +19,8 @@ src/apps/tms/types/apiTypes.tsx
 src/apps/fleet-planner/types/apiTypes.tsx
 src/mobile/**/*
 src/packages/**/*
-src/apps/**/*/graphql/*.ts
-src/components/**/*/graphql/*.ts
-src/types/graphqlTypes.ts
-schema.graphql
+src/**/graphql/*.ts
+src/rogers/types/graphqlTypes.ts
+types/graphqlTypes.ts
+src/schema.graphql
+exercises/*.graphql
