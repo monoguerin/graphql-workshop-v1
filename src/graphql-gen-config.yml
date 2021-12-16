@@ -1,0 +1,45 @@
+definitions:
+  add: &top-comment
+    content: >
+      /**
+        * @note This is an auto-generated file. Do not modify it directly.
+        * @see https://devdocs.transfix.io/graphql
+        * 
+        * If you need to update the hooks or definitions in this file: 
+        * 1. Edit the .graphql file in this directory with the same name
+        * 2. Run `npm run generate:graphql:mp` in the terminal
+        */
+
+schema: src/schema.graphql
+generates:
+  ./src/rogers/types/graphqlTypes.ts:
+    plugins:
+      - add: *top-comment
+      - typescript
+    config:
+      maybeValue: T | null | undefined
+      preResolveTypes: false
+      scalars:
+        ISO8601DateTime: string
+      typesPrefix: I
+      namingConvention:
+        enumValues: keep
+  ./src:
+    documents:
+    - "./src/**/*.graphql"
+    preset: near-operation-file
+    presetConfig:
+      baseTypesPath: "rogers/types/graphqlTypes.ts" # Tell it where to import these from
+      extension: ".ts" # Tell it how to name each file
+    plugins:
+      - add: *top-comment
+      - typescript-operations
+      - typescript-react-apollo
+    config:
+      maybeValue: T | null | undefined
+      preResolveTypes: false
+      scalars:
+        ISO8601DateTime: string
+      typesPrefix: I
+      namingConvention:
+        enumValues: keep

@@ -179,7 +179,7 @@ module.exports = {
       },
       parserOptions: {
         operations: './src/**/*.graphql',
-        schema: './schema.graphql',
+        schema: './src/schema.graphql',
       },
     },
     {

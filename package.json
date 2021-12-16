@@ -11,7 +11,8 @@
     "exercise-2": "jest exercise-2",
     "exercise-3": "jest exercise-3",
     "exercise-4": "jest exercise-4",
-    "exercise-5": "jest exercise-5"
+    "exercise-5": "jest exercise-5",
+    "graphql-gen": "graphql-codegen --config src/graphql-gen-config.yml"
   },
   "repository": {
     "type": "git",
@@ -25,11 +26,13 @@
   },
   "homepage": "https://github.com/monoguerin/graphql-workshop-v1#readme",
   "dependencies": {
+    "@apollo/client": "^3.5.6",
     "@babel/plugin-transform-runtime": "^7.16.5",
     "@date-io/moment": "^2.11.0",
     "@material-ui/core": "^4.12.3",
     "@material-ui/pickers": "^3.3.10",
     "@testing-library/jest-dom": "^5.16.1",
+    "axios": "^0.24.0",
     "babel-loader": "^8.2.3",
     "babel-plugin-transform-react-stateless-component-name": "^1.1.2",
     "color": "^4.1.0",
@@ -58,6 +61,12 @@
     "@babel/preset-env": "^7.16.5",
     "@babel/preset-react": "^7.16.5",
     "@babel/preset-typescript": "^7.16.5",
+    "@graphql-codegen/cli": "^2.3.0",
+    "@graphql-codegen/near-operation-file-preset": "^2.2.2",
+    "@graphql-codegen/typescript": "^2.4.1",
+    "@graphql-codegen/typescript-operations": "^2.2.1",
+    "@graphql-codegen/typescript-react-apollo": "^3.2.2",
+    "@graphql-eslint/eslint-plugin": "^3.2.0",
     "@types/color": "^3.0.2",
     "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",
