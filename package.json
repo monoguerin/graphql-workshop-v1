@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "webpack build --config ./src/rogers/webpack.config.js --stats verbose",
     "start": "node src/index.js",
     "rogers": "webpack serve --config ./src/rogers/webpack.config.js --color --progress --open --env env=development",
     "test": "jest",

@@ -1,6 +1,7 @@
 /* eslint-disable camelcase */
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path')
 
 require('./type-defs')
 
@@ -21,7 +22,7 @@ module.exports = {
   devtool: isDev ? 'eval-cheap-source-map' : 'source-map',
   target: 'web',
   output: {
-    path: '/dist',
+    path: path.resolve(__dirname, 'dist'),
     pathinfo: false,
     publicPath: '/',
     filename: isDev ? '[name].[hash].bundle.js' : '[name].[chunkhash].bundle.js',
@@ -112,7 +113,7 @@ module.exports = {
      * all your webpack bundles in the body using script tags.
      */
     new HtmlWebpackPlugin({
-      title: 'Cesar',
+      title: 'GraphQL Workshop',
       template: './src/rogers/index.html',
       minify: {
         removeComments: !isDev,
