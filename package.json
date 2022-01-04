@@ -12,6 +12,7 @@
     "exercise-3": "jest exercise-3",
     "exercise-4": "jest exercise-4",
     "exercise-5": "jest exercise-5",
+    "axios-test": "jest axios",
     "graphql-gen": "graphql-codegen --config src/graphql-gen-config.yml"
   },
   "repository": {
@@ -44,8 +45,8 @@
     "jest": "^27.4.3",
     "moment": "^2.29.1",
     "nodemon": "^2.0.15",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "sass": "^1.45.0",
     "sass-loader": "^12.4.0",
     "webpack": "^5.65.0",
@@ -87,6 +88,7 @@
     "eslint-plugin-storybook": "^0.5.3",
     "eslint-plugin-unused-imports": "^0.1.3",
     "express": "^4.17.1",
+    "ts-jest": "^27.1.2",
     "webpack-cli": "^4.9.1",
     "webpack-dev-middleware": "^5.2.2"
   }

@@ -1,1 +1,2 @@
-# query starts here
+# Create a new Query that returns all the notes
+# Get the id and body fields from the notes

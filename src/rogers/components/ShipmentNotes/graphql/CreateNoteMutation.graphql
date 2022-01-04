@@ -1,0 +1,3 @@
+# Build the CreateNote mutation
+# Use $input as the argument
+# Ask the id and body of the note created

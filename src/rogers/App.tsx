@@ -1,15 +1,11 @@
 import React from 'react'
-import { Typography } from '@material-ui/core'
-import { ThemeProvider } from './transfix-ui/theme'
+import ShipmentNotes from './components/ShipmentNotes'
 
-const Index = () => (
-  <Typography>Hello World</Typography>
-)
-
+// Implement the Apollo Provider with your client
 const App = () => (
-  <ThemeProvider>
-    <Index />
-  </ThemeProvider>
+  <div>
+    <ShipmentNotes />
+  </div>
 )
 
 export default App
