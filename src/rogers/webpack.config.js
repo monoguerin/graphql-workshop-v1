@@ -112,7 +112,7 @@ module.exports = {
      * all your webpack bundles in the body using script tags.
      */
     new HtmlWebpackPlugin({
-      title: 'Transfix',
+      title: 'Cesar',
       template: './src/rogers/index.html',
       minify: {
         removeComments: !isDev,

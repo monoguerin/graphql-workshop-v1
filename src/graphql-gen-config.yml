@@ -3,7 +3,7 @@ definitions:
     content: >
       /**
         * @note This is an auto-generated file. Do not modify it directly.
-        * @see https://devdocs.transfix.io/graphql
+        * @see DEV DOCS
         * 
         * If you need to update the hooks or definitions in this file: 
         * 1. Edit the .graphql file in this directory with the same name

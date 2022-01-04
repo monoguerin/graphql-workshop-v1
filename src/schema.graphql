@@ -32,7 +32,7 @@ type CreateNotePayload {
 
 interface CreatedByUser {
   """
-  The transfix child user that triggered the creation of this object
+  The child user that triggered the creation of this object
   """
   createdBy: User!
   createdById: Int!
@@ -97,7 +97,7 @@ type Note implements CreatedByUser {
   createdAt: ISO8601DateTime!
 
   """
-  The transfix child user that triggered the creation of this object
+  The child user that triggered the creation of this object
   """
   createdBy: User!
   createdById: Int!

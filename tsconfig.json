@@ -43,7 +43,6 @@
       "constants": ["constants/"],
       "utils": ["utils/"],
       "tests": ["tests/e2e/specs/"],
-      "transfix-ui": ["transfix-ui/"]
     },
     "types": ["jest"]
   },

@@ -1,6 +1,6 @@
 /**
   * @note This is an auto-generated file. Do not modify it directly.
-  * @see https://devdocs.transfix.io/graphql
+  * @see https://devdocs.io/graphql
   * 
   * If you need to update the hooks or definitions in this file: 
   * 1. Edit the .graphql file in this directory with the same name
@@ -48,7 +48,7 @@ export type ICreateNotePayload = {
 };
 
 export type ICreatedByUser = {
-  /** The transfix child user that triggered the creation of this object */
+  /** The child user that triggered the creation of this object */
   createdBy: IUser;
   createdById: Scalars['Int'];
 };
@@ -106,7 +106,7 @@ export type INote = ICreatedByUser & {
   calledBackAt?: Maybe<Scalars['ISO8601DateTime']>;
   /** CreatedAt timestamp in UTC */
   createdAt: Scalars['ISO8601DateTime'];
-  /** The transfix child user that triggered the creation of this object */
+  /** The child user that triggered the creation of this object */
   createdBy: IUser;
   createdById: Scalars['Int'];
   id: Scalars['ID'];
